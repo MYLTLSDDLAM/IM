@@ -36,5 +36,17 @@ namespace 即时通讯v1._0
         {
 
         }
+
+        private void Form3_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // System.Environment.Exit(0);
+            this.Dispose();
+            Application.ExitThread();
+        }
     }
 }

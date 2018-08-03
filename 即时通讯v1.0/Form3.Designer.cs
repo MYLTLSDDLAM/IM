@@ -48,6 +48,8 @@
             this.Controls.Add(this.multiVideoChatContainer1);
             this.Name = "Form3";
             this.Text = "视频聊天";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing_1);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
 
