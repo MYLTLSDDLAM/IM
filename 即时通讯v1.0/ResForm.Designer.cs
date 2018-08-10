@@ -1,6 +1,6 @@
 ﻿namespace 即时通讯v1._0
 {
-    partial class Form2
+    partial class ResForm
     {
         /// <summary>
         /// Required designer variable.

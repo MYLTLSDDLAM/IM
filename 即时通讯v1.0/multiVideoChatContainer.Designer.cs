@@ -59,7 +59,7 @@
             this.skinGroupBox1.Name = "skinGroupBox1";
             this.skinGroupBox1.RectBackColor = System.Drawing.Color.Transparent;
             this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox1.Size = new System.Drawing.Size(726, 109);
+            this.skinGroupBox1.Size = new System.Drawing.Size(726, 130);
             this.skinGroupBox1.TabIndex = 1;
             this.skinGroupBox1.TabStop = false;
             this.skinGroupBox1.Text = "我的设备";
@@ -163,11 +163,11 @@
             this.groupBox_members.Controls.Add(this.skinToolStrip1);
             this.groupBox_members.Controls.Add(this.flowLayoutPanel1);
             this.groupBox_members.ForeColor = System.Drawing.Color.Black;
-            this.groupBox_members.Location = new System.Drawing.Point(3, 118);
+            this.groupBox_members.Location = new System.Drawing.Point(3, 139);
             this.groupBox_members.Name = "groupBox_members";
             this.groupBox_members.RectBackColor = System.Drawing.Color.White;
             this.groupBox_members.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.groupBox_members.Size = new System.Drawing.Size(723, 596);
+            this.groupBox_members.Size = new System.Drawing.Size(723, 575);
             this.groupBox_members.TabIndex = 2;
             this.groupBox_members.TabStop = false;
             this.groupBox_members.Text = "成员列表";
@@ -256,7 +256,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 49);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(704, 403);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(717, 403);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.SizeChanged += new System.EventHandler(this.flowLayoutPanel1_SizeChanged);
             // 

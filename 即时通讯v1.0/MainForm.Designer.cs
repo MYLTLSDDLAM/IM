@@ -1,6 +1,6 @@
 ﻿namespace 即时通讯v1._0
 {
-    partial class Form3
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,23 +34,21 @@
             // multiVideoChatContainer1
             // 
             this.multiVideoChatContainer1.BackColor = System.Drawing.SystemColors.Window;
-            this.multiVideoChatContainer1.Location = new System.Drawing.Point(12, 51);
+            this.multiVideoChatContainer1.Location = new System.Drawing.Point(2, 5);
             this.multiVideoChatContainer1.Name = "multiVideoChatContainer1";
-            this.multiVideoChatContainer1.Size = new System.Drawing.Size(731, 497);
+            this.multiVideoChatContainer1.Size = new System.Drawing.Size(749, 507);
             this.multiVideoChatContainer1.TabIndex = 0;
             // 
-            // Form3
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(752, 557);
+            this.ClientSize = new System.Drawing.Size(754, 524);
             this.Controls.Add(this.multiVideoChatContainer1);
-            this.Name = "Form3";
+            this.Name = "MainForm";
             this.Text = "视频聊天";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing_1);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
-            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
 
         }

@@ -24,22 +24,17 @@ namespace 即时通讯v1._0
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Form1 f1 = new Form1();
+                LoginForm f1 = new LoginForm();
                 if (f1.ShowDialog() != DialogResult.OK)//f1的button点击确定后值为ok，所以返回
                 {
                     return;
-                }
-
-                GlobalUtil.SetAuthorizedUser(ConfigurationManager.AppSettings["AuthorizedUser"], ConfigurationManager.AppSettings["AuthorizedPassword"]);
-                GlobalUtil.SetMaxLengthOfUserID(byte.Parse(ConfigurationManager.AppSettings["MaxLengthOfUserID"]));
-                OMCSConfiguration config = new OMCSConfiguration();
+                }             
+                 OMCSConfiguration config = new OMCSConfiguration();
                 //用于验证登录用户的帐密
                 DefaultUserVerifier userVerifier = new DefaultUserVerifier();
                 Program.MultimediaServer = MultimediaServerFactory.CreateMultimediaServer(int.Parse(ConfigurationManager.AppSettings["Port"]), userVerifier, config, bool.Parse(ConfigurationManager.AppSettings["SecurityLogEnabled"]));
-                sever se = new sever(Program.MultimediaServer);
-              /*  if (se.ShowDialog() != DialogResult.OK)
-                { return;
-                }*/
+                
+                f1.sever2(Program.MultimediaServer);
 
                 IMultimediaManager multimediaManager = MultimediaManagerFactory.GetSingleton();
                 multimediaManager.Advanced.AllowDiscardFrameWhenBroadcast = false; //正式部署使用时，建议设置为true。
@@ -51,9 +46,9 @@ namespace 即时通讯v1._0
                 multimediaManager.MicrophoneDeviceIndex = int.Parse(ConfigurationManager.AppSettings["MicrophoneIndex"]);
                 multimediaManager.SpeakerIndex = int.Parse(ConfigurationManager.AppSettings["SpeakerIndex"]);
                 multimediaManager.DesktopEncodeQuality = 3;
-                multimediaManager.Initialize(f1.Bccount, "", ConfigurationManager.AppSettings["ServerIP"], int.Parse(ConfigurationManager.AppSettings["ServerPort"]));
-                //  MainForm mainForm = new MainForm(multimediaManager, loginForm.RoomID);
-                Form3 f3 = new Form3(multimediaManager, f1.RoomID);
+                multimediaManager.Initialize(f1.Bccount, f1.Cccount, ConfigurationManager.AppSettings["ServerIP"], int.Parse(ConfigurationManager.AppSettings["ServerPort"]));
+    
+                MainForm f3 = new MainForm(multimediaManager, f1.RoomID);
                 Application.Run(f3);
             }
             catch (Exception ee)

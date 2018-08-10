@@ -1,6 +1,6 @@
 ﻿namespace 即时通讯v1._0
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -48,7 +48,8 @@
             this.account.IconMouseState = CCWin.SkinClass.ControlState.Normal;
             this.account.IsPasswordChat = '\0';
             this.account.IsSystemPasswordChar = false;
-            this.account.Lines = new string[0];
+            this.account.Lines = new string[] {
+        "请输入账号"};
             this.account.Location = new System.Drawing.Point(225, 169);
             this.account.Margin = new System.Windows.Forms.Padding(0);
             this.account.MaxLength = 32767;
@@ -72,13 +73,16 @@
             this.account.SkinTxt.Name = "BaseText";
             this.account.SkinTxt.Size = new System.Drawing.Size(299, 22);
             this.account.SkinTxt.TabIndex = 0;
+            this.account.SkinTxt.Text = "请输入账号";
             this.account.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.account.SkinTxt.WaterText = "";
             this.account.TabIndex = 0;
+            this.account.Text = "请输入账号";
             this.account.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.account.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.account.WaterText = "";
             this.account.WordWrap = true;
+            this.account.MouseClick += new System.Windows.Forms.MouseEventHandler(this.account_MouseClick);
             // 
             // password
             // 
@@ -193,11 +197,11 @@
             this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel1.BorderColor = System.Drawing.Color.White;
             this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.Location = new System.Drawing.Point(174, 118);
+            this.skinLabel1.Location = new System.Drawing.Point(159, 118);
             this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(39, 20);
+            this.skinLabel1.Size = new System.Drawing.Size(54, 20);
             this.skinLabel1.TabIndex = 5;
-            this.skinLabel1.Text = "类别";
+            this.skinLabel1.Text = "关键字";
             // 
             // skinLabel2
             // 
@@ -223,11 +227,11 @@
             this.skinLabel3.TabIndex = 7;
             this.skinLabel3.Text = "账号";
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 506);
+            this.ClientSize = new System.Drawing.Size(776, 502);
             this.Controls.Add(this.skinLabel3);
             this.Controls.Add(this.skinLabel2);
             this.Controls.Add(this.skinLabel1);
@@ -236,7 +240,7 @@
             this.Controls.Add(this.login);
             this.Controls.Add(this.password);
             this.Controls.Add(this.account);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "IM";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

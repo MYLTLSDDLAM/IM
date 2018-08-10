@@ -12,12 +12,12 @@ using CCWin;
 
 namespace 即时通讯v1._0
 {
-    public partial class Form2 : CCSkinMain
+    public partial class ResForm : CCSkinMain
     {
         [DllImport("kernel32.dll")]
         private static extern long WritePrivateProfileString(string section, string key, string value, string filepath);
         private string IniFilePath;
-        public Form2()
+        public ResForm()
         {
             InitializeComponent();
             IniFilePath = Application.StartupPath + "\\Config.ini";

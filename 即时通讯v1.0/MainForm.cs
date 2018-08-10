@@ -1,5 +1,7 @@
 ﻿using CCWin;
+using ESBasic;
 using OMCS.Passive;
+using OMCS.Server;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +14,11 @@ using System.Windows.Forms;
 
 namespace 即时通讯v1._0
 {
-    public partial class Form3 :Form
+    public partial class MainForm :Form
     {
-        private IMultimediaManager multimediaManager;//初始化多媒体管理器（接口声明）
-       
-        public Form3(IMultimediaManager mgr, string chatRoomID)
+        private IMultimediaManager multimediaManager;//初始化多媒体管理器（接口声明）   
+        
+        public MainForm(IMultimediaManager mgr, string chatRoomID)
         {
             InitializeComponent();
 
@@ -24,29 +26,12 @@ namespace 即时通讯v1._0
             this.Text = this.Text + " - " + chatRoomID;
         //    this.skinLabel_userID.Text = this.multimediaManager.CurrentUserID;
             this.multiVideoChatContainer1.Initialize(this.multimediaManager, chatRoomID);
-        }
-
-
-        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        }     
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.multiVideoChatContainer1.Close();
             this.multimediaManager.Dispose();
         }
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form3_FormClosing_1(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            // System.Environment.Exit(0);
-            this.Dispose();
-            Application.ExitThread();
-        }
+       
     }
 }
